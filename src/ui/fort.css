@@ -126,3 +126,66 @@
 	.host-close .fc-hud { left: 6px; right: 6px; top: calc(max(10px, env(safe-area-inset-top)) + 46px); }
 	.host-close .fc-banner { top: calc(max(8px, env(safe-area-inset-top)) + 106px); }
 }
+
+/* Phones: Cyber's council (message + three answers) fits one screen without scrolling */
+@media (max-width: 600px), (max-height: 600px) {
+	.ath-modal { padding: 8px; }
+	.ath-card { padding: 10px 12px; border-radius: 20px; max-height: 100%; }
+	.ath-card h2 { font-size: 17px; line-height: 1.35; margin: 0 0 6px; padding-inline-end: 38px; }
+	.ath-card h3 { font-size: 15px; margin: 8px 0 5px; }
+	.ath-close { width: 32px; height: 32px; top: 8px; left: 8px; font-size: 14px; }
+	.ath-note { padding: 5px 10px; font-size: 13.5px; line-height: 1.4; border-radius: 10px; }
+	.ath-phone { border-width: 3px; border-radius: 18px; padding: 6px 8px 8px; margin-bottom: 4px; }
+	.ath-phone-top { font-size: 11px; margin-bottom: 4px; }
+	.ath-msg { padding: 7px 10px; border-radius: 12px; font-size: 14px; line-height: 1.45; }
+	.ath-msg p { margin: 4px 0; }
+	.ath-from { gap: 5px; margin-bottom: 3px; } .ath-from b { font-size: 15px; }
+	.ath-addr { font-size: 12.5px; padding: 2px 8px; border-radius: 9px; }
+	.ath-logo { font-size: 12px; padding: 1px 8px; margin-bottom: 2px; }
+	.ath-linkbtn { margin-top: 6px; padding: 7px 10px; font-size: 13.5px; border-radius: 10px; }
+	.ath-phone .ath-note { margin: 5px 0 0; font-size: 13px; }
+	.ath-inspect { margin-top: 6px; padding: 7px 10px; font-size: 14px; }
+	.ath-choices { gap: 6px; }
+	.ath-choice { min-height: 46px; padding: 6px 10px; gap: 8px; font-size: 14.5px; line-height: 1.35; border-width: 2px; border-radius: 13px; }
+	.ath-choice span { width: 30px; height: 30px; border-radius: 9px; font-size: 14px; }
+	.ath-evidence { gap: 5px; } .ath-evidence li { padding: 6px 10px; font-size: 14px; line-height: 1.4; }
+	.ath-avatar-circle { width: 60px; height: 60px; font-size: 28px; } .ath-call-in { padding: 6px 0; }
+	.ath-line { padding: 7px 10px; margin: 5px 0; font-size: 14px; } .ath-count { padding: 5px 10px; font-size: 14px; }
+	.ath-confirm { padding: 10px; } .ath-confirm p { margin: 0 0 4px; font-size: 14.5px; }
+	.ath-fb { width: 64px; height: 64px; } .ath-fb img { width: 40px; height: 40px; }
+	.ath-body { font-size: 15.5px; line-height: 1.5; }
+	.ath-btn { min-height: 44px; font-size: 16px; padding: 8px 14px; } .ath-btn.big { min-height: 50px; font-size: 18px; margin-top: 10px; }
+}
+/* inside the platform's full-screen page the card starts below its close button */
+@media (max-width: 600px) {
+	.host-close .ath-modal { padding-top: calc(max(10px, env(safe-area-inset-top)) + 46px); }
+}
+/* short phones (iPhone SE and the like) */
+@media (max-height: 620px) {
+	.host-close .ath-modal { padding-top: calc(max(8px, env(safe-area-inset-top)) + 42px); }
+	.ath-card h2 { font-size: 16px; margin-bottom: 4px; } .ath-card h3 { margin: 5px 0 4px; font-size: 14px; }
+	.ath-note { padding: 4px 9px; font-size: 13px; }
+	.ath-msg { font-size: 13.5px; line-height: 1.4; padding: 6px 9px; } .ath-msg p { margin: 3px 0; }
+	.ath-linkbtn { padding: 6px 9px; margin-top: 4px; }
+	.ath-choices { gap: 5px; } .ath-choice { min-height: 42px; padding: 5px 9px; font-size: 14px; }
+	.ath-choice span { width: 28px; height: 28px; }
+}
+/* phone held sideways: the message on one side, the answers on the other, so nothing scrolls */
+@media (orientation: landscape) and (max-height: 500px) {
+	.ath-card:has(> .ath-choices) { width: min(96vw, 860px); display: grid; grid-template-columns: 1.15fr 1fr; column-gap: 12px; align-items: start; }
+	.ath-card:has(> .ath-choices) > h2, .ath-card:has(> .ath-choices) > .ath-note, .ath-card:has(> .ath-choices) > .ath-confirm { grid-column: 1 / -1; }
+	.ath-card:has(> .ath-choices) > .ath-phone, .ath-card:has(> .ath-choices) > .ath-evidence { grid-column: 1; grid-row: 3 / span 2; margin-bottom: 0; }
+	.ath-card:has(> .ath-choices) > h3 { grid-column: 2; grid-row: 3; margin-top: 0; }
+	.ath-card:has(> .ath-choices) > .ath-choices { grid-column: 2; grid-row: 4; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+	.host-close .ath-modal { padding: 6px 56px; }   /* keep both top corners clear of the platform's close button */
+	.ath-card { padding: 8px 12px; }
+	.ath-card h2 { margin-bottom: 4px; } .ath-note { padding: 3px 9px; }
+	.ath-line { margin: 4px 0; padding: 5px 9px; font-size: 13.5px; line-height: 1.35; } .ath-count { padding: 4px 9px; font-size: 13px; }
+	.ath-phone-top { margin-bottom: 2px; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+	.host-close .ath-card { max-width: 100%; }
+	.host-close .ath-card:has(> .ath-choices) { width: min(100%, 860px); }
+}
