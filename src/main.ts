@@ -21,6 +21,7 @@ const el = document.getElementById('game');
 if (el) {
 	const params = new URLSearchParams(location.search);
 	const parentOrigin = params.get('parentOrigin');
+	if (params.get('hostUi') === 'close') document.documentElement.classList.add('host-close');   // platform close button in a top corner
 	const toParent = (type: string, data: unknown) => {
 		if (parentOrigin && window.parent !== window) window.parent.postMessage({ type, protocolVersion: 1, gameId: config.gameId, data }, parentOrigin);
 	};
