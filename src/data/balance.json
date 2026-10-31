@@ -1,0 +1,231 @@
+{
+  "note": "Fun numbers only (towers, threats, waves). They never change the knowledge score. Each habit-tower is strong against its own threat: bonus = damage multiplier against that threat; armor = how much damage a threat takes from towers without a bonus against it.",
+  "startCoins": 130,
+  "fortHealth": 20,
+  "reviveHealth": 6,
+  "upgradeCostRate": 0.7,
+  "councilReward": 45,
+  "councilRewardRecovered": 25,
+  "towers": {
+    "guard": {
+      "node": "Tower_Guard",
+      "cost": 50,
+      "dmg": 7,
+      "rate": 1.1,
+      "range": 8.6,
+      "color": "#ffcf5c",
+      "icon": "🏹"
+    },
+    "lantern": {
+      "node": "Tower_Lantern",
+      "cost": 60,
+      "dmg": 4,
+      "rate": 1.4,
+      "range": 9.8,
+      "color": "#fff1a8",
+      "icon": "🏮",
+      "reveal": true,
+      "bonus": {
+        "phisher": 2.5
+      }
+    },
+    "lock": {
+      "node": "Tower_Lock",
+      "cost": 80,
+      "dmg": 10,
+      "rate": 0.9,
+      "range": 8.6,
+      "color": "#f2c14e",
+      "icon": "🔐",
+      "bonus": {
+        "robot": 3
+      }
+    },
+    "twokeys": {
+      "node": "Tower_TwoKeys",
+      "cost": 80,
+      "dmg": 9,
+      "rate": 1.3,
+      "range": 10.9,
+      "color": "#38d6ff",
+      "icon": "🗝️",
+      "air": true,
+      "bonus": {
+        "bat": 1,
+        "dragon": 1
+      }
+    },
+    "update": {
+      "node": "Tower_Update",
+      "cost": 70,
+      "dmg": 6,
+      "rate": 1.6,
+      "range": 8,
+      "color": "#4cff9a",
+      "icon": "⚙️",
+      "bonus": {
+        "worm": 3
+      },
+      "slow": 0.5
+    },
+    "well": {
+      "node": "Well_Backup",
+      "cost": 100,
+      "icon": "🪣",
+      "passive": true
+    }
+  },
+  "enemies": {
+    "phisher": {
+      "node": "Enemy_Phisher",
+      "icon": "🎭",
+      "hp": 32,
+      "speed": 2.6,
+      "reward": 8,
+      "damage": 1,
+      "disguised": true,
+      "scale": 2.6
+    },
+    "robot": {
+      "node": "Enemy_Robot",
+      "icon": "🤖",
+      "hp": 90,
+      "speed": 1.9,
+      "reward": 12,
+      "damage": 2,
+      "armor": 0.35,
+      "scale": 2.6
+    },
+    "bat": {
+      "node": "Enemy_Bat",
+      "icon": "🦇",
+      "hp": 28,
+      "speed": 3,
+      "reward": 10,
+      "damage": 1,
+      "flying": true,
+      "scale": 2.8
+    },
+    "worm": {
+      "node": "Enemy_Worm",
+      "icon": "🐛",
+      "hp": 45,
+      "speed": 3.4,
+      "reward": 10,
+      "damage": 1,
+      "armor": 0.4,
+      "scale": 2.6
+    },
+    "dragon": {
+      "node": "Enemy_Dragon",
+      "icon": "🐉",
+      "hp": 1300,
+      "speed": 1.15,
+      "reward": 120,
+      "damage": 12,
+      "armor": 0.7,
+      "boss": true,
+      "scale": 2.3
+    }
+  },
+  "waves": [
+    {
+      "council": "M1.C1",
+      "unlock": "lantern",
+      "groups": [
+        {
+          "type": "phisher",
+          "count": 10,
+          "gap": 1.7
+        }
+      ]
+    },
+    {
+      "council": "M1.C2",
+      "unlock": "lock",
+      "groups": [
+        {
+          "type": "robot",
+          "count": 6,
+          "gap": 2.2
+        },
+        {
+          "type": "phisher",
+          "count": 5,
+          "gap": 1.5,
+          "delay": 5
+        }
+      ]
+    },
+    {
+      "council": "M1.C3",
+      "unlock": "twokeys",
+      "trap": "M1.C4",
+      "groups": [
+        {
+          "type": "bat",
+          "count": 8,
+          "gap": 1.6
+        },
+        {
+          "type": "robot",
+          "count": 4,
+          "gap": 2.4,
+          "delay": 7
+        }
+      ]
+    },
+    {
+      "council": "M1.C5",
+      "unlock": "update",
+      "groups": [
+        {
+          "type": "worm",
+          "count": 10,
+          "gap": 1.2
+        },
+        {
+          "type": "bat",
+          "count": 4,
+          "gap": 2,
+          "delay": 6
+        },
+        {
+          "type": "phisher",
+          "count": 4,
+          "gap": 1.5,
+          "delay": 10
+        }
+      ]
+    },
+    {
+      "council": "M1.C6",
+      "unlock": "well",
+      "groups": [
+        {
+          "type": "robot",
+          "count": 4,
+          "gap": 2
+        },
+        {
+          "type": "dragon",
+          "count": 1,
+          "gap": 1,
+          "delay": 6
+        },
+        {
+          "type": "worm",
+          "count": 6,
+          "gap": 1.3,
+          "delay": 11
+        },
+        {
+          "type": "bat",
+          "count": 5,
+          "gap": 1.8,
+          "delay": 16
+        }
+      ]
+    }
+  ]
+}

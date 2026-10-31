@@ -1,0 +1,323 @@
+{
+  "contentVersion": "1.0.0",
+  "note": "Cyber Fort. Every actionId must exist in missions.json. All names, addresses and codes are fictional.",
+  "ui": {
+    "introName": "سايبر",
+    "introNext": "التالي",
+    "introStart": "إلى المجلس",
+    "tutSkip": "تخطَّ",
+    "intro1": "أهلًا يا قائد! هذه قلعة الرستاق، وفيها كنز المدرسة: صور الطلاب وحساباتهم ومشاريعهم. أنا سايبر، درع القلعة.",
+    "intro2": "الأخطار تأتي من الوادي وتمشي في الطريق نحو بوابة القلعة. إذا وصلت البوابة يضعف درعي.",
+    "intro3": "ابنِ الأبراج على المنصات المضيئة. كل خطر له برج يوقفه، وكل برج تفتحه بقرار آمن في مجلسي!",
+    "councilTitle": "مجلس سايبر",
+    "councilNote": "أجب جوابًا آمنًا لتفتح برجًا جديدًا",
+    "unlocked": "فتحت برجًا جديدًا!",
+    "coinsBonus": "+{n} عملة ثقة",
+    "startWave": "ابدأ الموجة ⚔️",
+    "waveOf": "الموجة {n} من {total}",
+    "waveCleared": "صددت الموجة! 🎉",
+    "newThreat": "خطر جديد",
+    "stoppedBy": "يوقفه",
+    "buildTitle": "اختر برجًا",
+    "upgrade": "طوّر البرج",
+    "level2": "مطوّر ⭐",
+    "close": "إغلاق",
+    "notEnough": "تحتاج عملات ثقة أكثر",
+    "lockedTower": "افتحه في مجلس سايبر",
+    "tapPad": "اضغط على منصة مضيئة لتبني برجًا",
+    "firstBuild": "ابنِ برجًا أو أكثر، ثم اضغط «ابدأ الموجة»",
+    "revealed": "🏮 الفانوس كشف المتنكر!",
+    "gateHit": "خطر وصل البوابة! الدرع يضعف",
+    "revive": "سايبر أعاد شحن الدرع! انتبه هذه المرة",
+    "wrongTower": "{enemy} لا يتأثر كثيرًا بهذا البرج. جرّب {tower}",
+    "wellSaved": "🪣 النسخة الاحتياطية أنقذت الكنز! وحش الفدية لم يقفل شيئًا",
+    "treasureLocked": "🔒 وحش الفدية قفل جزءًا من الكنز… النسخة الاحتياطية كانت ستنقذه",
+    "trapFell": "سقط شيء لامع قرب الطريق!",
+    "health": "درع القلعة",
+    "coins": "عملات الثقة",
+    "speed": "سرعة",
+    "resultTitle": "انتهت المعركة!",
+    "knowledge": "درجة الوعي",
+    "points": "{earned} من {max}",
+    "passed": "أنت حامي القلعة!",
+    "practice": "أعد المحاولة لتتقن الدروس",
+    "stars": "نجوم القلعة",
+    "starsNote": "النجوم للمتعة فقط ولا تغيّر درجة الوعي",
+    "starWaves": "صددت كل الموجات",
+    "starHealth": "الدرع فوق النصف",
+    "starTreasure": "أنقذت الكنز",
+    "review": "قراراتك",
+    "safeFirst": "آمن من أول مرة",
+    "recovered": "صححته في الفرصة الثانية",
+    "again": "معركة جديدة",
+    "time": "الوقت",
+    "continue": "تابع",
+    "ok": "حسنًا",
+    "back": "رجوع",
+    "choose": "ماذا ستفعل؟",
+    "phoneCancel": "إلغاء",
+    "phoneOpen": "فتح",
+    "phoneSender": "المرسل",
+    "phoneAnswer": "رد",
+    "safeTitle": "قرار آمن!",
+    "unsafeTitle": "قرار غير آمن",
+    "secondChance": "فرصة ثانية: فكّر مرة أخرى",
+    "phoneCountdown": "الحساب سيتوقف خلال",
+    "bossDown": "🐉 هزمت وحش الفدية! الكنز بأمان"
+  },
+  "towers": {
+    "guard": {
+      "nameAr": "برج الحرس",
+      "whatAr": "حارس عادي يرمي على الأخطار الظاهرة"
+    },
+    "lantern": {
+      "nameAr": "فانوس «تحقق من المرسل»",
+      "whatAr": "يكشف المتنكرين، فتراهم كل الأبراج"
+    },
+    "lock": {
+      "nameAr": "برج «العبارة الطويلة»",
+      "whatAr": "يكسر روبوتات التخمين"
+    },
+    "twokeys": {
+      "nameAr": "برج «التحقق الثنائي»",
+      "whatAr": "الوحيد الذي يصيب المتصلين الطائرين"
+    },
+    "update": {
+      "nameAr": "برج «التحديث»",
+      "whatAr": "يوقف الديدان ويبطئها"
+    },
+    "well": {
+      "nameAr": "بئر «النسخة الاحتياطية»",
+      "whatAr": "ينقذ الكنز من وحش الفدية"
+    }
+  },
+  "enemies": {
+    "phisher": {
+      "nameAr": "المتنكر",
+      "whatAr": "يتنكر في شكل ساعي بريد لطيف ويحمل جائزة مزيفة",
+      "stopAr": "الفانوس يكشفه"
+    },
+    "robot": {
+      "nameAr": "روبوت التخمين",
+      "whatAr": "يجرب كلمات المرور السهلة بسرعة، ودرعه قوي",
+      "stopAr": "برج العبارة الطويلة يكسره"
+    },
+    "bat": {
+      "nameAr": "المتصل المحتال",
+      "whatAr": "يطير فوق الأسوار ويطلب رمز التحقق",
+      "stopAr": "برج التحقق الثنائي يصيبه"
+    },
+    "worm": {
+      "nameAr": "الدودة",
+      "whatAr": "سريعة، تتسلل من البرامج القديمة والتحميلات المجهولة",
+      "stopAr": "برج التحديث يوقفها"
+    },
+    "dragon": {
+      "nameAr": "وحش الفدية",
+      "whatAr": "يقفل كنز القلعة ويطلب فدية",
+      "stopAr": "بئر النسخة الاحتياطية ينقذ الكنز"
+    }
+  },
+  "checkpoints": {
+    "M1.C1": {
+      "titleAr": "رسالة وصلت إلى القلعة",
+      "phone": {
+        "app": "message",
+        "appAr": "الرسائل",
+        "time": "8:10",
+        "fromAr": "مسابقة المدارس",
+        "fromAddress": "awards.school-prize.internal",
+        "logoAr": "مسابقة المدارس",
+        "bodyAr": "يا {displayName}، صورة صفك فازت بجائزة! ادخل الرابط واكتب كلمة مرور حساب المدرسة لتستلمها خلال ساعة.",
+        "link": "awards.school-prize.internal/claim",
+        "linkActionId": "open_award_link",
+        "linkConfirmAr": "فتح هذا الرابط؟",
+        "notesAr": [
+          "العنوان الرسمي للمسابقة: awards.school.internal"
+        ],
+        "inspect": {
+          "parts": [
+            "awards",
+            ".school",
+            "-prize",
+            ".internal"
+          ],
+          "officialParts": [
+            "awards",
+            ".school",
+            ".internal"
+          ],
+          "suspiciousPart": 2,
+          "promptAr": "اضغط على الجزء الذي لا يوجد في العنوان الرسمي.",
+          "foundAr": "صحيح! «prize» غير موجود في العنوان الرسمي. الرسالة مزيفة.",
+          "wrongAr": "هذا الجزء موجود في العنوان الرسمي. جرّب جزءًا آخر."
+        }
+      },
+      "evidenceAr": [
+        "رسالة جائزة تطلب كلمة مرور حساب المدرسة."
+      ],
+      "choices": [
+        {
+          "actionId": "open_award_link",
+          "labelAr": "أضغط الرابط بسرعة قبل أن تنتهي الجائزة"
+        },
+        {
+          "actionId": "check_sender_address",
+          "labelAr": "العنوان مزيف، لا أضغط وأبلغ عنها"
+        },
+        {
+          "actionId": "send_password_award",
+          "labelAr": "أكتب كلمة المرور لأستلم الجائزة"
+        }
+      ],
+      "consequencesAr": {
+        "open_award_link": "فُتحت صفحة مزيفة تشبه موقع المدرسة (محاكاة).",
+        "send_password_award": "وصلت كلمة المرور إلى المحتال، فدخل حساب الصف (محاكاة)."
+      }
+    },
+    "M1.C2": {
+      "titleAr": "روبوتات التخمين قادمة",
+      "evidenceAr": [
+        "روبوت التخمين يجرّب آلاف كلمات المرور السهلة في الثانية.",
+        "أي كلمة مرور تصمد أطول أمامه؟"
+      ],
+      "choices": [
+        {
+          "actionId": "name_and_123",
+          "labelAr": "اسمي ثم 123، سهلة التذكر"
+        },
+        {
+          "actionId": "long_passphrase",
+          "labelAr": "عبارة طويلة: «قلعتي في الرستاق أقوى من الريح»"
+        },
+        {
+          "actionId": "same_password_everywhere",
+          "labelAr": "كلمة قوية واحدة لكل حساباتي"
+        }
+      ],
+      "consequencesAr": {
+        "name_and_123": "خمّنها الروبوت في ثوانٍ (محاكاة).",
+        "same_password_everywhere": "سُرق حساب واحد، ففُتحت كل الحسابات الأخرى (محاكاة)."
+      }
+    },
+    "M1.C3": {
+      "titleAr": "مكالمة واردة إلى القلعة",
+      "phone": {
+        "app": "call",
+        "time": "10:15",
+        "fromAr": "الدعم الفني",
+        "fromSubAr": "رقم غير محفوظ",
+        "linesAr": [
+          "السلام عليكم، معك الدعم الفني في الحرم.",
+          "حسابك سيتوقف خلال دقائق!",
+          "أرسل لي رمز التحقق الذي وصلك الآن لنحمي حسابك."
+        ],
+        "notesAr": [
+          "المتصل يعرف اسمك."
+        ],
+        "countdownSec": 180,
+        "countdownAr": "الحساب سيتوقف خلال",
+        "voice": [
+          "VO_Caller_1",
+          "VO_Caller_2",
+          "VO_Caller_3"
+        ]
+      },
+      "evidenceAr": [
+        "متصل يطلب رمز التحقق ويستعجلك."
+      ],
+      "choices": [
+        {
+          "actionId": "read_code_to_caller",
+          "labelAr": "أقرأ له الرمز بسرعة"
+        },
+        {
+          "actionId": "turn_off_two_step",
+          "labelAr": "أطفئ التحقق الثنائي حتى لا تصلني رموز"
+        },
+        {
+          "actionId": "refuse_share_code",
+          "labelAr": "أرفض وأغلق الخط، الرمز سر"
+        }
+      ],
+      "consequencesAr": {
+        "read_code_to_caller": "دخل المحتال الحساب بالرمز (محاكاة).",
+        "turn_off_two_step": "صار الحساب يُفتح بكلمة المرور وحدها، وهذا أضعف (محاكاة)."
+      }
+    },
+    "M1.C4": {
+      "titleAr": "صندوق ذهب مجاني!",
+      "evidenceAr": [
+        "سقط صندوق لامع قرب الطريق، مكتوب عليه: «افتحني واربح ١٠٠٠ عملة مجانًا!»"
+      ],
+      "choices": [
+        {
+          "actionId": "open_free_chest",
+          "labelAr": "أفتحه بسرعة"
+        },
+        {
+          "actionId": "send_chest_to_friends",
+          "labelAr": "أرسله لأصدقائي ليفتحوه"
+        },
+        {
+          "actionId": "leave_and_report_chest",
+          "labelAr": "لا أفتحه وأبلغ عنه"
+        }
+      ],
+      "consequencesAr": {
+        "open_free_chest": "خرجت من الصندوق ديدان ضارة نحو القلعة! (محاكاة)",
+        "send_chest_to_friends": "فتحه صديقك، فانتشرت الديدان عنده (محاكاة)."
+      }
+    },
+    "M1.C5": {
+      "titleAr": "تحديث أم تحميل مجهول؟",
+      "evidenceAr": [
+        "ظهرت رسالة: «لعبتك قديمة! حمّل النسخة المجانية من هذا الموقع».",
+        "وجهازك يطلب تحديثًا رسميًا منذ أسبوع."
+      ],
+      "choices": [
+        {
+          "actionId": "download_from_unknown_site",
+          "labelAr": "أحمّل من الموقع المجهول لأنه مجاني"
+        },
+        {
+          "actionId": "official_update",
+          "labelAr": "أحدّث من متجر التطبيقات الرسمي"
+        },
+        {
+          "actionId": "always_skip_updates",
+          "labelAr": "أؤجل التحديثات دائمًا، تزعجني"
+        }
+      ],
+      "consequencesAr": {
+        "download_from_unknown_site": "كان الملف دودة متنكرة (محاكاة).",
+        "always_skip_updates": "بقيت الثغرات مفتوحة، فتسللت الديدان (محاكاة)."
+      }
+    },
+    "M1.C6": {
+      "titleAr": "وحش الفدية قادم!",
+      "evidenceAr": [
+        "وحش الفدية يقفل الملفات ويطلب مالًا لفتحها.",
+        "ماذا يحمي صورك ومشاريعك قبل أن يصل؟"
+      ],
+      "choices": [
+        {
+          "actionId": "pay_the_ransom",
+          "labelAr": "أدفع له إذا قفلها"
+        },
+        {
+          "actionId": "keep_backup",
+          "labelAr": "نسخة احتياطية في مكان آمن، أحدّثها دائمًا"
+        },
+        {
+          "actionId": "one_copy_only",
+          "labelAr": "أبقي ملفاتي في جهاز واحد فقط"
+        }
+      ],
+      "consequencesAr": {
+        "pay_the_ransom": "الدفع لا يضمن رجوع الملفات، ويشجع المحتالين (محاكاة).",
+        "one_copy_only": "إذا قُفل الجهاز ضاع كل شيء (محاكاة)."
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "assessmentVersion": "1.0.0",
+  "missions": [
+    {
+      "id": "M1",
+      "order": 1,
+      "titleAr": "حماية قلعة الرستاق",
+      "locationAr": "قلعة الرستاق",
+      "categoryId": "layered-defence",
+      "variantIds": ["base"],
+      "maximumPoints": 100,
+      "checkpoints": [
+        {
+          "id": "M1.C1", "order": 1, "labelAr": "رسالة الجائزة", "weight": 15,
+          "safeActionId": "check_sender_address",
+          "unsafeActionIds": ["open_award_link", "send_password_award"],
+          "feedbackAr": "الجائزة المفاجئة التي تطلب كلمة مرورك خدعة. قارن عنوان المرسل بالعنوان الرسمي قبل أي ضغطة.",
+          "hintAr": "اضغط على عنوان المرسل وقارنه بالعنوان الرسمي."
+        },
+        {
+          "id": "M1.C2", "order": 2, "labelAr": "كلمة المرور القوية", "weight": 15,
+          "safeActionId": "long_passphrase",
+          "unsafeActionIds": ["name_and_123", "same_password_everywhere"],
+          "feedbackAr": "العبارة الطويلة تصمد أمام روبوتات التخمين، وكل حساب يحتاج كلمة مرور خاصة به.",
+          "hintAr": "الطول أقوى من التعقيد، والتكرار في كل الحسابات خطر."
+        },
+        {
+          "id": "M1.C3", "order": 3, "labelAr": "رمز التحقق", "weight": 20,
+          "safeActionId": "refuse_share_code",
+          "unsafeActionIds": ["read_code_to_caller", "turn_off_two_step"],
+          "feedbackAr": "رمز التحقق مفتاح ثانٍ لحسابك. لا تعطه لأحد، والدعم الحقيقي لا يطلبه أبدًا.",
+          "hintAr": "من يطلب الرمز بالهاتف محتال، مهما قال."
+        },
+        {
+          "id": "M1.C4", "order": 4, "labelAr": "صندوق الذهب المجاني", "weight": 15,
+          "safeActionId": "leave_and_report_chest",
+          "unsafeActionIds": ["open_free_chest", "send_chest_to_friends"],
+          "feedbackAr": "الهدايا المجانية المفاجئة فخ يخفي برامج ضارة. لا تفتحها وأبلغ عنها.",
+          "hintAr": "ما يلمع فجأة ويعدك بالمجان غالبًا فخ."
+        },
+        {
+          "id": "M1.C5", "order": 5, "labelAr": "التحديث الآمن", "weight": 15,
+          "safeActionId": "official_update",
+          "unsafeActionIds": ["download_from_unknown_site", "always_skip_updates"],
+          "feedbackAr": "التحديثات الرسمية تسد ثغرات الديدان. حمّل من المتجر الرسمي فقط، ولا تؤجل التحديث.",
+          "hintAr": "المصدر الرسمي هو المتجر، لا المواقع المجهولة."
+        },
+        {
+          "id": "M1.C6", "order": 6, "labelAr": "النسخة الاحتياطية", "weight": 20,
+          "safeActionId": "keep_backup",
+          "unsafeActionIds": ["pay_the_ransom", "one_copy_only"],
+          "feedbackAr": "النسخة الاحتياطية المحدّثة تعيد ملفاتك إذا قفلها برنامج الفدية، فلا تحتاج أن تدفع لأحد.",
+          "hintAr": "ما الذي يعيد ملفاتك إذا قُفلت؟"
+        }
+      ]
+    }
+  ]
+}
